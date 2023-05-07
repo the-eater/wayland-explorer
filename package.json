@@ -6,8 +6,10 @@
     "license": "MIT",
     "homepage": "/protocols",
     "dependencies": {
-        "@headlessui/react": "^1.4.1",
+        "@headlessui/react": "^1.7.14",
+        "@types/lunr": "^2.3.4",
         "@vscode/codicons": "^0.0.21",
+        "lunr": "^2.3.9",
         "plausible-tracker": "^0.3.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
@@ -22,6 +24,7 @@
         "test": "react-scripts test",
         "regenerate-protocols": "ts-node --project=./tsconfig.scripts.json ./scripts/bin/regenerate-protocols-data.ts",
         "print-registry": "ts-node --project=./tsconfig.scripts.json ./scripts/bin/print-protocol-registry-items.ts",
+        "search-index": "ts-node --project=./tsconfig.scripts.json ./scripts/bin/build-search-index.ts",
         "eject": "react-scripts eject"
     },
     "eslintConfig": {

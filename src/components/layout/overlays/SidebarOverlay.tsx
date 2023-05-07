@@ -1,13 +1,14 @@
-import { Transition } from '@headlessui/react'
+import {Transition} from '@headlessui/react'
 import React from 'react'
-import { Logo } from '../Logo'
-import { OverlayBackground } from './OverlayBackground'
+import {Logo} from '../Logo'
+import {OverlayBackground} from './OverlayBackground'
+import {SearchInput} from "../../search/SearchInput";
 
 export const SidebarOverlay: React.FC<{
     open: boolean
     setIsOpen: (open: boolean) => void
     children?: React.ReactNode
-}> = ({ open, setIsOpen, children }) => (
+}> = ({open, setIsOpen, children}) => (
     <Transition show={open}>
         {/* Off-canvas menu for mobile, show/hide based on off-canvas menu state. */}
         <div
@@ -15,7 +16,7 @@ export const SidebarOverlay: React.FC<{
             role="dialog"
             aria-modal="true"
         >
-            <OverlayBackground />
+            <OverlayBackground/>
 
             {/* Off-canvas menu, show/hide based on off-canvas menu state. */}
             <Transition.Child
@@ -63,7 +64,7 @@ export const SidebarOverlay: React.FC<{
                 </Transition.Child>
                 <div className="h-full flex flex-col shadow-xl bg-gray-50 dark:bg-gray-900">
                     <div className="px-4 my-4">
-                        <Logo />
+                        <Logo/>
                     </div>
 
                     <nav className="flex-1 overflow-y-auto">
